@@ -3,22 +3,21 @@
       <div class="col-10 mx-auto col-md-6 offset-md-3 mt-5">
           <form class="p-3" #form="ngForm" id="studentForm" (ngSubmit)="saveStudent(form)">
             <div class="mb-3">
-              <label for="firstName" class="form-label">FirstName:</label>
-              <input type="text" class="form-control" id="firstName" [(ngModel)]="studentForm.firstName" name="firstName"
-                required #name="ngModel">
-              <small class="text-danger" *ngIf="name.invalid && name.touched">FirstName is required</small>
+                <label for="firstName" class="form-label">FirstName:</label>
+                <input type="text" class="form-control" id="firstName" [(ngModel)]="studentForm.firstName" name="firstName" required #name="ngModel">
+                <small class="text-danger" *ngIf="name.invalid && name.touched">FirstName is required</small>
             </div>
+
             <div class="mb-3">
-              <label for="lastName" class="form-label">LastName:</label>
-              <input type="text" class="form-control" id="lastName" [(ngModel)]="studentForm.lastName" name="lastName" required
-                #name="ngModel">
-              <small class="text-danger" *ngIf="name.invalid && name.touched">LastName is required</small>
+                <label for="lastName" class="form-label">LastName:</label>
+                <input type="text" class="form-control" id="lastName" [(ngModel)]="studentForm.lastName" name="lastName" required #name="ngModel">
+                <small class="text-danger" *ngIf="name.invalid && name.touched">LastName is required</small>
             </div>
+
             <div class="mb-3">
-              <label for="email" class="form-label">Email:</label>
-              <input type="text" class="form-control" id="email" [(ngModel)]="studentForm.email" name="email" required
-                #name="ngModel">
-              <small class="text-danger" *ngIf="name.invalid && name.touched">Email is required</small>
+                <label for="email" class="form-label">Email:</label>
+                <input type="text" class="form-control" id="email" [(ngModel)]="studentForm.email" name="email" required #name="ngModel">
+                <small class="text-danger" *ngIf="name.invalid && name.touched">Email is required</small>
             </div>
             <button type="submit" class="btn btn-primary" [disabled]="form.invalid" id="save-button">Save changes</button>
           </form>
