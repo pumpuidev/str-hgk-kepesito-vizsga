@@ -20,9 +20,9 @@ app.use('/student', require('./controllers/student/student.routes'));
 app.use('/school', require('./controllers/school/school.routes'));
 //task 3
 app.use('/classroom', require('./controllers/classroom/classroom.routes'));
-
-app.use('/building', (req, res, next) => res.json([]))
 //task 4
+app.use('/building', (req, res, next) => res.json([]))
+//task 5
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 app.use((err, req, res, next) => {
